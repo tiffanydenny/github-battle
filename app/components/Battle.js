@@ -49,6 +49,7 @@ class PlayerInput extends React.Component {
     })
   }
 
+
   render() {
     return (
       <form className='column player' onSubmit={this.handleSubmit}>
@@ -77,6 +78,7 @@ class PlayerInput extends React.Component {
     )
   }
 }
+
 
 PlayerInput.propTypes = {
   onSubmit: PropTypes.func.isRequired,
@@ -143,7 +145,17 @@ export default class Battle extends React.Component {
     const { playerOne, playerTwo, battle } = this.state
 
     if (battle === true) {
-      return <Results playerOne={playerOne} playerTwo={playerTwo}/>
+      return (
+        <Results
+          playerOne={playerOne}
+          playerTwo={playerTwo}
+          onReset={() => this.setState({
+            playerOne: null,
+            playerTwo: null,
+            battle: false
+          })}
+        />
+      )
     }
 
     return (
@@ -177,15 +189,15 @@ export default class Battle extends React.Component {
                 />
             }
           </div>
+
           {playerOne && playerTwo && (
             <button
-              className = 'btn dark-btn btn-space'
+              className='btn dark-btn btn-space'
               onClick={() => this.setState({battle: true})}
             >
               Battle
             </button>
           )}
-
         </div>
       </React.Fragment>
     )
