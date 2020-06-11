@@ -5,8 +5,7 @@ html, body, #app {
 }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,
-               Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 }
 
 ul {
@@ -21,6 +20,12 @@ li {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px;
+}
+
+.dark {
+  color: #DADADA;
+  background: #1c2022;
+  min-height: 100%;
 }
 
 .flex-center {
@@ -41,6 +46,10 @@ li {
   color: inherit;
 }
 
+.nav li {
+  margin-right: 10px;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -48,6 +57,10 @@ li {
 
 .space-around {
   justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .header-lg {
@@ -75,7 +88,7 @@ li {
 }
 
 .link {
-  color: rgb(201, 28, 12);
+  color: rgb(187, 46, 31);
   text-decoration: none;
   font-weight: bold;
 }
@@ -135,7 +148,7 @@ li {
 
 .battle-instructions li {
   flex: 1;
-  min-width: 300px;
+  min-width: 300px
 }
 
 .battle-instructions svg {
@@ -238,4 +251,24 @@ li {
   color: #ff1616;
   font-size: 20px;
   margin: 50px 0;
+}
+
+.bg-dark {
+  background: rgb(36, 40, 42);
+  border-radius: 3px;
+}
+
+.player-inputs .input-dark {
+  color: #DADADA;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.light-btn {
+  color: #000;
+  background: #aaa8a8;
+}
+
+.light-btn:disabled {
+  background: #292929;
+  color: #4a4a4a;
 }
